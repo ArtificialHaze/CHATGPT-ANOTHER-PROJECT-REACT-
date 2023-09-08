@@ -1,0 +1,152 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+:root {
+  --kinda-black: rgb(34, 34, 34);
+  --body-color: #fafafa;
+  --kinda-red: rgb(255, 96, 86);
+  --kinda-yellow: rgb(255, 189, 45);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+  scroll-behavior: smooth;
+  color: var(--kinda-black);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--body-color);
+}
+
+p,
+input {
+  font-size: 16px;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 80vh;
+  width: 80vw;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
+}
+
+.code-display {
+  width: 96%;
+  margin: 2%;
+  height: 46%;
+  border-radius: 8px;
+  background-color: var(--kinda-black);
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  gap: 5px;
+  width: 100%;
+  height: 35px;
+  background-color: rgb(50, 50, 50);
+}
+
+.button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: crimson;
+  cursor: pointer;
+}
+
+.button.first {
+  background-color: var(--kinda-red);
+}
+
+.button.middle {
+  background-color: var(--kinda-yellow);
+}
+
+.button.last {
+  background-color: rgb(38, 201, 64);
+}
+
+.messages-display {
+  width: 96%;
+  margin: 2%;
+  height: 46%;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.message-display {
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: var(--body-color);
+  margin: 5px 0px;
+}
+
+p#icon {
+  padding: 0px 7px;
+  cursor: pointer;
+}
+
+input {
+  margin: 2%;
+  padding: 16px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2%;
+}
+
+.buttons button {
+  text-transform: uppercase;
+  padding: 7px;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons button#getQuery {
+  background-color: var(--kinda-red);
+  border-radius: 10px 0 0 10px;
+}
+
+.buttons button#clearQuery {
+  background-color: var(--kinda-yellow);
+  border-radius: 0 10px 10px 0;
+}
+
+.code-output {
+  margin: 20px;
+}
+
+.code-output p {
+  color: var(--kinda-yellow);
+}
